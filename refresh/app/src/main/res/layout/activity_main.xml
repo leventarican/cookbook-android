@@ -8,13 +8,25 @@
     android:layout_gravity="center_vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <!-- tools namespace (e.g. tools:src) not used when compile; good for preview-->
+    <!-- the app:srcCompat attribute uses the Android X library to support vector drawables in older versions of Android, back to API level 7.-->
+    <ImageView
+        android:id="@+id/img_first_dice"
+        tools:src="@drawable/dice_1"
+        android:src="@drawable/empty_dice"
+        android:contentDescription="@string/first_dice"
         android:layout_gravity="center_horizontal"
-        android:textSize="30sp"
-        android:text="Hello World!" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/img_second_dice"
+        tools:src="@drawable/dice_4"
+        android:src="@drawable/empty_dice"
+        android:contentDescription="@string/second_dice"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/bt_roll"
