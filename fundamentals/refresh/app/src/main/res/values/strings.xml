@@ -3,4 +3,5 @@
     <string name="button_text">roll</string>
     <string name="second_dice">second dice</string>
     <string name="first_dice">first dice</string>
+    <string name="button_next">next</string>
 </resources>

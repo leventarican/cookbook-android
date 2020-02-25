@@ -1,29 +1,42 @@
 package com.github.leventarican.refresh
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
+/**
+ * checkout the associated layout file: android_main.xml
+ * we use AppCompatActivity instead of Activity because its supports modern Android features and
+ * provides backward compatibility
+ */
 class MainActivity : AppCompatActivity() {
 
     lateinit var dice_0: ImageView
     lateinit var dice_1: ImageView
     lateinit var rollButton: Button
-//    var rollButton: Button? = null
+    lateinit var nextButton: Button
 
+    // onCreate is the minimum required method of the lifecycle methods
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         fullscreen()
         setContentView(R.layout.activity_main)
 
+        // find view references
         dice_0 = findViewById(R.id.img_first_dice)
         dice_1 = findViewById(R.id.img_second_dice)
         rollButton = findViewById(R.id.bt_roll)
+        nextButton = findViewById(R.id.bt_next)
 
+        // add click handler to button
         rollButton.setOnClickListener {
             roll()
+        }
+        nextButton.setOnClickListener {
+            startActivity(Intent(this, Page0::class.java))
         }
 
     }
@@ -36,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         actionBar?.hide()
     }
 
+    /*
+    randomly select a image and set it
+     */
     private fun roll(): Unit {
         var randomDice = when ((1..6).random()) {
             1 -> R.drawable.dice_1

@@ -8,7 +8,11 @@
     android:layout_gravity="center_vertical"
     tools:context=".MainActivity">
 
-    <!-- tools namespace (e.g. tools:src) not used when compile; good for preview-->
+    <!--
+    tools namespace (e.g. tools:src) not used when compile;
+    good for preview. so in preview you see dice_1 and dice_4 image
+    when you start the app the initial screen uses empty_dice (= a placeholder)
+    -->
     <!-- the app:srcCompat attribute uses the Android X library to support vector drawables in older versions of Android, back to API level 7.-->
     <ImageView
         android:id="@+id/img_first_dice"
@@ -34,5 +38,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/button_text" />
+
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_next" />
 
 </LinearLayout>
