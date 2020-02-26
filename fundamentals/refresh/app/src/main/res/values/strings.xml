@@ -4,4 +4,6 @@
     <string name="second_dice">second dice</string>
     <string name="first_dice">first dice</string>
     <string name="button_next">next</string>
+    <string name="page0_button_back">back</string>
+    <string name="page0_text">android</string>
 </resources>

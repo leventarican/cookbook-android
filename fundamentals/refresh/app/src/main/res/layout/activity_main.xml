@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <!--
-    tools namespace (e.g. tools:src) not used when compile;
+    tools xml namespace (e.g. tools:src) not used when compile;
     good for preview. so in preview you see dice_1 and dice_4 image
     when you start the app the initial screen uses empty_dice (= a placeholder)
     -->
