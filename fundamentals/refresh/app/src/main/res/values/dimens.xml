@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- select number > CTRL + ALT > extract dimension resource -->
+<!-- select number > CTRL + ALT > extract dimension resource
+or in the attributes pane > ... > resource dialog
+-->
 <resources>
-    <dimen name="text_size_20">20sp</dimen>
+    <!-- The dp abbreviation stands for density-independent -->
+    <!-- specifying text size, always use sp (scalable pixels) -->
+    <dimen name="text_size_20">30sp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="layout_margin">16dp</dimen>
 </resources>
