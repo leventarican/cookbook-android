@@ -14,6 +14,12 @@
     content
     -->
     <!-- style attr. see res/values/styles.xml -->
+    <Button
+        android:id="@+id/bt_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/page0_button_back" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -21,21 +27,46 @@
         android:text="@string/page0_text"
         android:textAlignment="center" />
 
-    <!--
-    an ImageView can a Bitmap (png, jpeg, ...) or a Drawable (vector graphic) resource
-    -->
+    <EditText
+        android:id="@+id/progLang_edit"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/what_is_your_programming_language"
+        android:inputType="textShortMessage|textPersonName|text|textEmailAddress"
+        android:text="" />
+
+    <Button
+        android:id="@+id/bt_apply"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:fontFamily="@font/roboto"
+        android:text="@string/button_apply"
+        android:onClick="buttonApplyHandler"/>
+
+    <TextView
+        android:id="@+id/progLang_text"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:background="@color/colorAccent"
+        android:paddingBottom="@dimen/small_padding"
+        android:visibility="gone" />
+
+    <!-- an ImageView can a Bitmap (png, jpeg, ...) or a Drawable (vector graphic) resource -->
     <ImageView
         android:id="@+id/green_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/green_image_description"
+        android:onClick="buttonApplyHandler"
         app:srcCompat="@android:drawable/presence_online" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/page0_button_back" />
 
     <ScrollView
         android:id="@+id/scrollView"

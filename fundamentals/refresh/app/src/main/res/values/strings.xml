@@ -21,4 +21,6 @@
         any of whom might wish to study or modify the program.
         \n\n
     </string>
+    <string name="what_is_your_programming_language">what is your programming language</string>
+    <string name="button_apply">APPLY</string>
 </resources>
