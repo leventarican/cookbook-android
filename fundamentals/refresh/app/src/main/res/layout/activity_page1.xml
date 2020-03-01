@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Page1">
+    tools:context=".Page1"
+    android:id="@+id/root_constraint_layout"
+    >
 
     <!--
     ConstraintLayout allows you to create complex layouts with flat view hierarchies (no nested view groups)

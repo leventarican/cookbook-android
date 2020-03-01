@@ -5,7 +5,7 @@
     <string name="first_dice">first dice</string>
     <string name="button_next">next</string>
     <string name="button_back">back</string>
-    <string name="page0_text">android</string>
+    <string name="system">android</string>
     <string name="green_image_description">demonstration for an image resource</string>
     <string name="scroll_text">
         In computing, source code is any collection of code, possibly with comments,

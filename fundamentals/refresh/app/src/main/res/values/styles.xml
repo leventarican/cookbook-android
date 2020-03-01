@@ -11,6 +11,7 @@
     <!--
     use for any TextView.
     I extracted this style from TextView: Component Tree > extract Style ...
+    or select view in design view > right click > refactor > ...
     -->
     <style name="NameStyle">
         <item name="android:layout_marginTop">@dimen/layout_margin</item>
@@ -21,12 +22,24 @@
     </style>
 
     <style name="whiteBox">
-        <item name="android:background">@android:color/holo_green_light</item>
+        <item name="android:background">@android:color/white</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">@dimen/box_text_size</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="greenBox">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_wide</item>
+        <item name="android:layout_marginTop">@dimen/margin_wide</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
     </style>
 
 </resources>

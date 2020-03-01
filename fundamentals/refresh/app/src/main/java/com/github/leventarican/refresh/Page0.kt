@@ -19,7 +19,7 @@ class Page0 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page0)
 
-        backButton = findViewById(R.id.bt_back);
+        backButton = findViewById(R.id.bt_back)
 
         // programmatically way to handle a button click at runtime.
         backButton.setOnClickListener {
