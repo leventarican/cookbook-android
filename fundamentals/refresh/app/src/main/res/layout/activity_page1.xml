@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page1">
+
+    <!--
+    ConstraintLayout allows you to create complex layouts with flat view hierarchies (no nested view groups)
+
+    play around with the orientation: portrait or landscape mode
+    -->
+
+    <TextView
+        android:id="@+id/tv_box_one"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:layout_marginRight="@dimen/margin_wide"
+        android:text="@string/box_one"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_box_two"
+        style="@style/whiteBox"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/box_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_box_one" />
+
+    <!--
+    these three Views are chains. box 3 is head chain.
+    in design view select all three Views > Chains > ...
+
+    then apply the following constraints
+    - box 3 constraint to top box 2
+    - box 5 constraint to bottom box 2
+    - for each View (box 3 - 5) left and right constraints
+    - layout_width = 0 to use all horizontal space
+    -->
+    <TextView
+        android:id="@+id/tv_chain_box_three"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginEnd="@dimen/margin_wide"
+        android:text="@string/chain_box_tree"
+        app:layout_constraintBottom_toTopOf="@+id/tv_chain_box_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_box_two"
+        app:layout_constraintTop_toTopOf="@+id/tv_box_two" />
+
+    <TextView
+        android:id="@+id/tv_chain_box_four"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:layout_marginEnd="@dimen/margin_wide"
+        android:layout_marginBottom="@dimen/margin_wide"
+        android:text="@string/chain_box_four"
+        app:layout_constraintBottom_toTopOf="@+id/tv_chain_box_five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_box_two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_chain_box_three" />
+
+    <TextView
+        android:id="@+id/tv_chain_box_five"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginEnd="@dimen/margin_wide"
+        android:text="@string/chain_box_five"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_box_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_box_two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_chain_box_four" />
+
+    <!--
+    also a chain: in design view select all three Views > Chains > ...
+    -->
+    <Button
+        android:id="@+id/bt_page1_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginBottom="@dimen/margin_wide"
+        android:text="@string/button_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_page1_next"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_page1_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_wide"
+        android:layout_marginBottom="@dimen/margin_wide"
+        android:text="@string/button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bt_page1_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

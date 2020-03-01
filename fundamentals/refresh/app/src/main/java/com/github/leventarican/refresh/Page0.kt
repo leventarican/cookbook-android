@@ -25,7 +25,9 @@ class Page0 : AppCompatActivity() {
         backButton.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
-
+        findViewById<TextView>(R.id.bt_next).setOnClickListener {
+            startActivity(Intent(this, Page1::class.java))
+        }
         findViewById<TextView>(R.id.progLang_text).setOnClickListener {
             textViewHandler(it)
         }

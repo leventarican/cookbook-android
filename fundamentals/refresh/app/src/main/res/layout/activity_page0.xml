@@ -18,7 +18,12 @@
         android:id="@+id/bt_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/page0_button_back" />
+        android:text="@string/button_back" />
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/page0_button_next" />
 
     <TextView
         android:id="@+id/textView"

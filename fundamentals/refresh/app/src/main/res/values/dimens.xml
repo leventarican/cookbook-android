@@ -8,4 +8,6 @@ or in the attributes pane > ... > resource dialog
     <dimen name="text_size_20">30sp</dimen>
     <dimen name="small_padding">8dp</dimen>
     <dimen name="layout_margin">16dp</dimen>
+    <dimen name="margin_wide">16dp</dimen>
+    <dimen name="box_text_size">24sp</dimen>
 </resources>

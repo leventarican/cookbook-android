@@ -4,7 +4,7 @@
     <string name="second_dice">second dice</string>
     <string name="first_dice">first dice</string>
     <string name="button_next">next</string>
-    <string name="page0_button_back">back</string>
+    <string name="button_back">back</string>
     <string name="page0_text">android</string>
     <string name="green_image_description">demonstration for an image resource</string>
     <string name="scroll_text">
@@ -23,4 +23,10 @@
     </string>
     <string name="what_is_your_programming_language">what is your programming language</string>
     <string name="button_apply">APPLY</string>
+    <string name="page0_button_next">next</string>
+    <string name="box_one">box one</string>
+    <string name="box_two">box two</string>
+    <string name="chain_box_tree">box three</string>
+    <string name="chain_box_four">box four</string>
+    <string name="chain_box_five">box five</string>
 </resources>
