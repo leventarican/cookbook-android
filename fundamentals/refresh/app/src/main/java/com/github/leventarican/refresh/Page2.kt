@@ -1,8 +1,10 @@
 package com.github.leventarican.refresh
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import com.github.leventarican.refresh.databinding.ActivityPage2Binding
 import com.github.leventarican.refresh.model.ProgrammingLanguage
@@ -41,12 +43,16 @@ class Page2 : AppCompatActivity() {
         // set layout variable with data class instance
         binding.programmingLanguage = programmingLanguage
 
-        binding.etPage2Input.setOnClickListener {
+        binding.btPage2Apply.setOnClickListener {
             binding.apply {
-                programmingLanguage?.extension = binding.etPage2Input.text.toString()
+                programmingLanguage?.name = binding.etPage2Input.text.toString()
                 // refresh the UI with the new data
                 invalidateAll()
             }
+
+            // hide keyboard
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(it.windowToken, 0)
         }
     }
 }

@@ -12,4 +12,4 @@
 ## troubleshooting
 * sometimes the design view does not represent the correct view. just run the app in order to see the real view.
 * data-binding: if you receive the following error `Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException`
-and use Java 11 then mind that `java.xml.bind` is no more supported in Java 11.
+and use Java 11 then mind that `java.xml.bind` is no more supported in Java 11. or just use Java 8.
