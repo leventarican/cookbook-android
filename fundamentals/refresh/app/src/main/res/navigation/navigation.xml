@@ -6,6 +6,7 @@
     app:startDestination="@id/page3TitleFragment">
 
     <!-- troubleshooting: Preview Unavailable -> add tools namespace and use tools:layout -->
+    <!-- handling the back stack with popUp, ... -->
 
     <fragment
         android:id="@+id/page3TitleFragment"
@@ -20,5 +21,26 @@
         android:id="@+id/page3ImageFragment"
         android:name="com.github.leventarican.refresh.Page3ImageFragment"
         android:label="Page3ImageFragment"
-        tools:layout="@layout/fragment_page3_image" />
+        tools:layout="@layout/fragment_page3_image" >
+        <action
+            android:id="@+id/action_page3ImageFragment_to_page3KotlinFragment"
+            app:destination="@id/page3KotlinFragment"
+            app:popUpTo="@id/page3TitleFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_page3ImageFragment_to_page3JavaFragment"
+            app:destination="@id/page3JavaFragment"
+            app:popUpTo="@id/page3TitleFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/page3JavaFragment"
+        android:name="com.github.leventarican.refresh.Page3JavaFragment"
+        android:label="fragment_page3_java"
+        tools:layout="@layout/fragment_page3_java" />
+    <fragment
+        android:id="@+id/page3KotlinFragment"
+        android:name="com.github.leventarican.refresh.Page3KotlinFragment"
+        android:label="fragment_page3_kotlin"
+        tools:layout="@layout/fragment_page3_kotlin" />
 </navigation>

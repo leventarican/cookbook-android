@@ -4,10 +4,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- before we can it we need to bind fragment. see Page3ImageFragment: binding.instance = this -->
+    <data>
+        <variable name="instance" type="com.github.leventarican.refresh.Page3ImageFragment" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Page3ImageFragment">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="conditional navigation"
+            style="@style/greenBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/iv_page3_fragment"
@@ -19,7 +35,56 @@
             android:src="@drawable/ic_launcher_foreground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/what_is_your_programming_language"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_page3_fragment" />
+
+        <RadioGroup
+            android:id="@+id/rg_options"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question">
+
+            <RadioButton
+                android:id="@+id/rb_first_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@{instance.options.first}"
+                android:textSize="@dimen/text_size_20"
+                tools:text="not defined" />
+
+            <RadioButton
+                android:id="@+id/rb_second_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@{instance.options.second}"
+                android:textSize="@dimen/text_size_20"
+                tools:text="not defined" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/bt_page3_fragment_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

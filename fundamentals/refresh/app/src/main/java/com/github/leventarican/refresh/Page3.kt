@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
  * demonstration of Navigation framework:
  * - check build.gradle (project and module)
  * - [Page3] uses [androidx.navigation.fragment.NavHostFragment]
- * - this activity has two fragments. The user can navigate from [Page3TitleFragment] to [Page3ImageFragment]
+ * - this activity has fragments. The user can navigate from [Page3TitleFragment] to [Page3ImageFragment] ...
  */
 class Page3 : AppCompatActivity() {
 
