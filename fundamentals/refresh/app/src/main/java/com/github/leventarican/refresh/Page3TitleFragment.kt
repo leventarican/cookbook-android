@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import com.github.leventarican.refresh.databinding.FragmentPage3TitleBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -13,9 +14,8 @@ import androidx.databinding.DataBindingUtil
 class Page3TitleFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_page3_title, container, false)
+        val binding = DataBindingUtil.inflate<FragmentPage3TitleBinding>(inflater, R.layout.fragment_page3_title,container,false)
+        return binding.root
     }
 
 }

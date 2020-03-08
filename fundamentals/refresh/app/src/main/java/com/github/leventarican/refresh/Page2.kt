@@ -34,7 +34,7 @@ class Page2 : AppCompatActivity() {
             startActivity(Intent(this, Page1::class.java))
         }
         binding.btPage2Next.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, Page3::class.java))
         }
         binding.tvPage2BoxOne.setOnClickListener {
             it.setBackgroundResource(R.drawable.ic_launcher_foreground)

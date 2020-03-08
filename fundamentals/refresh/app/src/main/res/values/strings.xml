@@ -29,4 +29,7 @@
     <string name="chain_box_tree">box three</string>
     <string name="chain_box_four">box four</string>
     <string name="chain_box_five">box five</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
