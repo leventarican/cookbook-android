@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
     app:startDestination="@id/page3TitleFragment">
+
+    <!-- troubleshooting: Preview Unavailable -> add tools namespace and use tools:layout -->
 
     <fragment
         android:id="@+id/page3TitleFragment"
         android:name="com.github.leventarican.refresh.Page3TitleFragment"
-        android:label="Page3TitleFragment" >
+        android:label="Page3TitleFragment"
+        tools:layout="@layout/fragment_page3_title">
         <action
             android:id="@+id/action_page3TitleFragment_to_page3ImageFragment"
             app:destination="@id/page3ImageFragment" />
@@ -14,5 +19,6 @@
     <fragment
         android:id="@+id/page3ImageFragment"
         android:name="com.github.leventarican.refresh.Page3ImageFragment"
-        android:label="Page3ImageFragment" />
+        android:label="Page3ImageFragment"
+        tools:layout="@layout/fragment_page3_image" />
 </navigation>
