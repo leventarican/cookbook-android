@@ -43,4 +43,9 @@ dependencies {
 
     // this is needed for data-binding. Java 11 does not support jaxb anymore.
     implementation 'javax.xml.bind:jaxb-api:2.3.1'
+
+    // add Navigation framework; see also project build.gradle where $navigationVersion is defined
+    // then create navigation.xml file: right click res/ > New > Android Resource File > resource type Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 }

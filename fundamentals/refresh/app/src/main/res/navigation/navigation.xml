@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/page3TitleFragment">
+
+    <fragment
+        android:id="@+id/page3TitleFragment"
+        android:name="com.github.leventarican.refresh.Page3TitleFragment"
+        android:label="Page3TitleFragment" >
+        <action
+            android:id="@+id/action_page3TitleFragment_to_page3ImageFragment"
+            app:destination="@id/page3ImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page3ImageFragment"
+        android:name="com.github.leventarican.refresh.Page3ImageFragment"
+        android:label="Page3ImageFragment" />
+</navigation>

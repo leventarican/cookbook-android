@@ -45,4 +45,10 @@
         android:layout_height="wrap_content"
         android:text="@string/button_next" />
 
+    <Button
+        android:id="@+id/bt_page3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="page 3" />
+
 </LinearLayout>

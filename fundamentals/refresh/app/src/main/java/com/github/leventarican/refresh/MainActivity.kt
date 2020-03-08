@@ -32,16 +32,12 @@ class MainActivity : AppCompatActivity() {
         nextButton = findViewById(R.id.bt_next)
 
         // add click handler to button
-        rollButton.setOnClickListener {
-            roll()
-        }
-        nextButton.setOnClickListener {
-            startActivity(Intent(this, Page0::class.java))
-        }
-
+        rollButton.setOnClickListener { roll() }
+        nextButton.setOnClickListener { startActivity(Intent(this, Page0::class.java)) }
+        findViewById<Button>(R.id.bt_page3).setOnClickListener { startActivity(Intent(this, Page3::class.java)) }
     }
 
-    fun fullscreen(): Unit {
+    private fun fullscreen(): Unit {
         // Hide the status bar.
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         // Remember that you should never show the action bar if the
