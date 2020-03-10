@@ -8,47 +8,34 @@
     android:layout_gravity="center_vertical"
     tools:context=".MainActivity">
 
-    <!--
-    tools xml namespace (e.g. tools:src) not used when compile;
-    good for preview. so in preview you see dice_1 and dice_4 image
-    when you start the app the initial screen uses empty_dice (= a placeholder)
-    -->
-    <!-- the app:srcCompat attribute uses the Android X library to support vector drawables in older versions of Android, back to API level 7.-->
-    <ImageView
-        android:id="@+id/img_first_dice"
-        tools:src="@drawable/dice_1"
-        android:src="@drawable/empty_dice"
-        android:contentDescription="@string/first_dice"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <ImageView
-        android:id="@+id/img_second_dice"
-        tools:src="@drawable/dice_4"
-        android:src="@drawable/empty_dice"
-        android:contentDescription="@string/second_dice"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
     <Button
-        android:id="@+id/bt_roll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/button_text" />
-
-    <Button
-        android:id="@+id/bt_next"
+        android:id="@+id/bt_page0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_next" />
-
+        android:text="page 0" />
+    <Button
+        android:id="@+id/bt_page1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="page 1" />
+    <Button
+        android:id="@+id/bt_page2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="page 2" />
     <Button
         android:id="@+id/bt_page3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="page 3" />
-
+    <Button
+        android:id="@+id/bt_page4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="page 4" />
+    <Button
+        android:id="@+id/bt_page5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="page 5" />
 </LinearLayout>

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Page3"></activity>
+        <activity android:name=".Page5"></activity>
+        <activity android:name=".Page5Activity" />
+        <activity android:name=".Page4" />
+        <activity android:name=".Page3" />
         <activity android:name=".Page2" />
         <activity android:name=".Page1" />
         <activity android:name=".Page0" />
