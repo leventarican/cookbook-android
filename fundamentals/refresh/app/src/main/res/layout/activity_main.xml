@@ -38,4 +38,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="page 5" />
+    <Button
+        android:id="@+id/bt_page6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="page 6" />
 </LinearLayout>
