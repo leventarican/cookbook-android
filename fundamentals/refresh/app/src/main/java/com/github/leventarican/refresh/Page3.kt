@@ -7,7 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
  * demonstration of Navigation framework:
  * - check build.gradle (project and module)
  * - [Page3] uses [androidx.navigation.fragment.NavHostFragment]
- * - this activity has fragments. The user can navigate from [Page3TitleFragment] to [Page3ImageFragment] ...
+ * - this activity has fragments. The user can navigate from [Page3TitleFragment] to [Page3ImageFragment]
+ * - from [Page3ImageFragment] conditionally either to [Page3JavaFragment] or [Page3KotlinFragment]
+ * - see navigation.xml
+ *
+ * demonstration of Safe Args: navigation-safe-args-gradle-plugin
+ * - by adding the safe args plugin it will generate __Direction__ classes for each Fragment where direction are defined > see generated java folder
+ * - __WITH__ Safe Args you can pass data type-safe between fragment.
+ * - https://developer.android.com/guide/navigation/navigation-pass-data#Safe-args
+ * - https://codelabs.developers.google.com/codelabs/kotlin-android-training-start-external-activity/index.html#2
  */
 class Page3 : AppCompatActivity() {
 

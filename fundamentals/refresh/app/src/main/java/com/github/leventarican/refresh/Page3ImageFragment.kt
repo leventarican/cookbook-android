@@ -28,8 +28,12 @@ class Page3ImageFragment : Fragment() {
             val userDecision = binding.rgOptions.checkedRadioButtonId
             if (userDecision != -1) {
                 when (userDecision) {
-                    R.id.rb_first_answer -> view!!.findNavController().navigate(R.id.action_page3ImageFragment_to_page3JavaFragment)
-                    R.id.rb_second_answer -> view!!.findNavController().navigate(R.id.action_page3ImageFragment_to_page3KotlinFragment)
+//                    R.id.rb_first_answer -> view!!.findNavController().navigate(R.id.action_page3ImageFragment_to_page3JavaFragment)
+//                    R.id.rb_second_answer -> view!!.findNavController().navigate(R.id.action_page3ImageFragment_to_page3KotlinFragment)
+
+                    // when using Safe Args: navigation-safe-args-gradle-plugin
+                    R.id.rb_first_answer -> view!!.findNavController().navigate(Page3ImageFragmentDirections.actionPage3ImageFragmentToPage3JavaFragment())
+                    R.id.rb_second_answer -> view!!.findNavController().navigate(Page3ImageFragmentDirections.actionPage3ImageFragmentToPage3KotlinFragment())
                 }
             }
         }

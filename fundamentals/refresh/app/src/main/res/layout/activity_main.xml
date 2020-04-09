@@ -27,7 +27,7 @@
         android:id="@+id/bt_page3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="page 3" />
+        android:text="page 3: fragment, navigation, ..." />
     <Button
         android:id="@+id/bt_page4"
         android:layout_width="match_parent"
@@ -37,10 +37,15 @@
         android:id="@+id/bt_page5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="page 5" />
+        android:text="page 5: transformation, ..." />
     <Button
         android:id="@+id/bt_page6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="page 6" />
+        android:text="page 6: animation, ..." />
+    <Button
+        android:id="@+id/bt_page7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="page 7" />
 </LinearLayout>
