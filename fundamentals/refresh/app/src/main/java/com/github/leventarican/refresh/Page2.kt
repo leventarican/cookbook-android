@@ -11,9 +11,10 @@ import com.github.leventarican.refresh.model.ProgrammingLanguage
 
 /**
  * Data-binding demonstration.
- * every time we use findViewById Android system traverses the view hierarchy at runtime to find it
+ * - every time we use findViewById Android system traverses the view hierarchy at runtime to find it
  * data-binding needs to be activated in build.gradle (Module: app) -> dataBinding { enabled = true }
- * also the root element / view group has to wrap with layout element
+ * - also the root element / view group has to wrap with `<layout/>` element
+ * - for the data class you need also `<data/>` element in the layout xml
  */
 class Page2 : AppCompatActivity() {
 
@@ -21,11 +22,13 @@ class Page2 : AppCompatActivity() {
     // the name is derived from the name of the layout file_ activity_main + Binding
     private lateinit var binding: ActivityPage2Binding
 
+    // this is the data class linked in the layout xml in <data/>
     private val programmingLanguage: ProgrammingLanguage = ProgrammingLanguage("Kotlin")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // after this binding is ready to use.
         binding = DataBindingUtil.setContentView(this, R.layout.activity_page2)
 
         // no findViewById needed

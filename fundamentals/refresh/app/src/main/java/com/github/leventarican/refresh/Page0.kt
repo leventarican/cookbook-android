@@ -11,6 +11,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
+/**
+ * this activity demonstrates:
+ * 
+ * - ViewGroup
+ * - extract style: TextView, Button, ...
+ * - ScrollView
+ * - EditText configuration
+ * - Button click-handler (either in code or in xml)
+ */
 class Page0 : AppCompatActivity() {
 
     lateinit var backButton: Button

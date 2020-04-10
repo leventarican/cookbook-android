@@ -37,7 +37,13 @@
         android:id="@+id/page3JavaFragment"
         android:name="com.github.leventarican.refresh.Page3JavaFragment"
         android:label="fragment_page3_java"
-        tools:layout="@layout/fragment_page3_java" />
+        tools:layout="@layout/fragment_page3_java" >
+        <!-- pass data with safe-args plugin -->
+        <argument
+            android:name="hello"
+            app:argType="integer"
+            android:defaultValue="42" />
+    </fragment>
     <fragment
         android:id="@+id/page3KotlinFragment"
         android:name="com.github.leventarican.refresh.Page3KotlinFragment"

@@ -17,6 +17,7 @@ import com.github.leventarican.refresh.databinding.FragmentPage3ImageBinding
 class Page3ImageFragment : Fragment() {
 
     val options = Pair("java", "kotlin")
+    val sampleData = 7
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentPage3ImageBinding>(inflater, R.layout.fragment_page3_image,container,false)
@@ -32,8 +33,16 @@ class Page3ImageFragment : Fragment() {
 //                    R.id.rb_second_answer -> view!!.findNavController().navigate(R.id.action_page3ImageFragment_to_page3KotlinFragment)
 
                     // when using Safe Args: navigation-safe-args-gradle-plugin
-                    R.id.rb_first_answer -> view!!.findNavController().navigate(Page3ImageFragmentDirections.actionPage3ImageFragmentToPage3JavaFragment())
-                    R.id.rb_second_answer -> view!!.findNavController().navigate(Page3ImageFragmentDirections.actionPage3ImageFragmentToPage3KotlinFragment())
+                    // pass data when java is selected: the data is in navigation.xml defined.
+                    R.id.rb_first_answer -> view!!
+                        .findNavController()
+                        .navigate(Page3ImageFragmentDirections
+                            .actionPage3ImageFragmentToPage3JavaFragment())
+
+                    R.id.rb_second_answer -> view!!
+                        .findNavController()
+                        .navigate(Page3ImageFragmentDirections
+                            .actionPage3ImageFragmentToPage3KotlinFragment())
                 }
             }
         }

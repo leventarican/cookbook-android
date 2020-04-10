@@ -7,6 +7,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 
+/**
+ * simple activity demonstration:
+ * - ImageView
+ */
 class Page4 : AppCompatActivity() {
 
     lateinit var dice_0: ImageView

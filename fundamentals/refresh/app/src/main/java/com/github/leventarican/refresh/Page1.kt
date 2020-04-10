@@ -8,6 +8,13 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 
+/**
+ * this activity demonstrates:
+ *
+ * - ConstraintLayout
+ * - extract margins
+ * - chains, chain styles (spread, packed chain with bias, ...)
+ */
 class Page1 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
